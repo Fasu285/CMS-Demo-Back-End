@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "singularName": "article",
+    "pluralName": "articles",
+    "displayName": "Article",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Body": {
+      "type": "richtext",
+      "required": true
+    },
+    "Date": {
+      "type": "date"
+    },
+    "Tag": {
+      "type": "text"
+    },
+    "Author": {
+      "type": "string"
+    },
+    "Category": {
+      "type": "enumeration",
+      "enum": [
+        "News Article",
+        "Magazine Article",
+        "Features",
+        "Opinion pieces",
+        "Reviews",
+        "Instructional articles"
+      ],
+      "required": true
+    },
+    "Images": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Summary": {
+      "type": "richtext"
+    },
+    "Comments": {
+      "type": "text"
+    }
+  }
+}
